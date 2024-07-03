@@ -1,5 +1,5 @@
 {
-  "name": "02-api-rest-nodejs",
+  "name": "02-api-rest-nodejs-desafio",
   "version": "0.0.1",
   "description": "Projeto de estudo de API REST e rotas HTTP com Node.js",
   "main": "server.ts",
@@ -7,27 +7,36 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "tsx watch src/server.ts --trace-warnings",
+    "dev": "tsx watch src/server.ts",
     "start": "node build/server.js",
     "build": "tsup src --out-dir build",
-    "lint": "eslint src"
+    "lint": "eslint src --fix",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "@fastify/cookie": "9.3.1",
+    "dotenv": "16.4.5",
+    "fastify": "4.28.0",
+    "knex": "3.1.0",
+    "pg": "8.12.0",
+    "vitest": "1.6.0",
+    "zod": "3.23.8"
   },
   "devDependencies": {
     "@eslint/js": "9.5.0",
+    "@faker-js/faker": "8.4.1",
     "@trivago/prettier-plugin-sort-imports": "4.3.0",
     "@types/node": "20.14.9",
+    "@types/supertest": "6.0.2",
     "eslint": "9.5.0",
     "eslint-config-prettier": "9.1.0",
     "globals": "15.6.0",
     "prettier": "3.3.2",
+    "sqlite3": "5.1.7",
+    "supertest": "7.0.0",
     "tsup": "7.1.0",
     "tsx": "3.12.7",
     "typescript": "5.5.2",
     "typescript-eslint": "7.14.1"
-  },
-  "dependencies": {
-    "fastify": "4.28.0",
-    "knex": "3.1.0",
-    "sqlite3": "5.1.7"
   }
 }
